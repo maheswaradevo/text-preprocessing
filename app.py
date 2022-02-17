@@ -1,19 +1,19 @@
+import utils
 from nltk.tokenize import sent_tokenize, word_tokenize
-import nltk
-from utils import csv_reader
 
 document = ""
-document = csv_reader()
+document = utils.csv_reader()
+new_document = utils.convert_lowercase(document)
 
-words = word_tokenize(document)
+# Tokenizing document that are given per words.
+words = word_tokenize(new_document)
 new_words = [text for text in words if text.isalnum()]
-
 print("WORDS")
 print(new_words)
 
 print("============================")
 
+# Tokenizing document that are given per sentences.
 print("SENTENCES")
-sentences = sent_tokenize(document)
-
+sentences = sent_tokenize(new_document)
 print(sentences)
