@@ -17,3 +17,10 @@ print("============================")
 print("SENTENCES")
 sentences = sent_tokenize(new_document)
 print(sentences)
+
+print("============================")
+
+# Removing stop words in indonesian language
+print("STOP WORDS REMOVAL")
+filtering = utils.stop_word_removal(new_words)
+print(filtering)
