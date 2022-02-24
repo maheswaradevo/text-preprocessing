@@ -22,5 +22,21 @@ print("============================")
 
 # Removing stop words in indonesian language
 print("STOP WORDS REMOVAL")
-filtering = utils.stop_word_removal(new_words)
+filtering = utils.stop_words_removal(new_document)
 print(filtering)
+
+print("============================")
+
+# Stemming the words
+print("STEMMING")
+stem = utils.stem_words(filtering, new_words)
+print(stem)
+
+print("============================")
+
+# Removing duplicate
+print("DUPLICATE REMOVAL")
+duplicate_removal = utils.remove_duplicate(stem)
+print(duplicate_removal)
+
+print("============================")
